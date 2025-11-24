@@ -1,20 +1,18 @@
 {
-    "$schema": "https://openapi.vercel.sh/vercel.json",
-    "github": {
-      "silent": true
-    },
-    "trailingSlash": false,
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/api/vercel.go"
-      }
-    ],
-    "functions": {
-      "api/*.go": {
-      
-      }
-    },
-    "regions": ["bom1"]
-  }
-  
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "github": {
+    "silent": true
+  },
+  "trailingSlash": false,
+  "build": {
+    "env": {
+      "GO_VERSION": "1.21"
+    }
+  },
+  "functions": {
+    "api/vercel.go": {
+      "runtime": "go1.x"
+    }
+  },
+  "regions": ["bom1"]
+}
