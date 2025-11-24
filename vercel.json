@@ -1,0 +1,20 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "github": {
+      "silent": true
+    },
+    "trailingSlash": false,
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/api/vercel.go"
+      }
+    ],
+    "functions": {
+      "api/*.go": {
+      
+      }
+    },
+    "regions": ["bom1"]
+  }
+  
